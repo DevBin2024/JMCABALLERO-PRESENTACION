@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07513f">
+  <meta name="description" content="José Manuel Caballero Valenzuela, Gerente de Fitonova SpA. I+D+i y sanidad vegetal. Guarda su contacto o comunícate por WhatsApp, teléfono o correo.">
+  <title>José Manuel Caballero · Fitonova SpA</title>
+  <link rel="icon" href="./favicon-fitonova.ico?v=20261022" type="image/x-icon" sizes="any">
+  <link rel="icon" href="./favicon-fitonova-32.png?v=20261022" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./apple-touch-icon-fitonova.png?v=20261022" sizes="180x180">
+  <style>
+    :root { color-scheme:light; --green:#075c43; --forest:#053f33; --leaf:#cae69e; --ink:#133d34; --muted:#536b60; --line:#dce5dc; --paper:#fcfdf9; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100svh; background:var(--paper); color:var(--ink); font-family:"Segoe UI",Inter,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button,textarea { font:inherit; }
+    button { cursor:pointer; }
+    a,button { -webkit-tap-highlight-color:transparent; }
+    a:focus-visible,button:focus-visible,textarea:focus-visible { outline:3px solid #588528; outline-offset:5px; }
+    .icon { display:block; flex-shrink:0; width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+    .symbols { position:absolute; width:0; height:0; overflow:hidden; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .presentation { display:grid; grid-template-columns:minmax(0,44fr) minmax(0,56fr); width:100%; min-height:100svh; }
+    .visual-panel { position:relative; isolation:isolate; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; gap:32px; min-width:0; padding:clamp(30px,4vw,72px); background:#07513f; color:#fff; }
+    .visual-panel::after { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(135deg,#063d36f5 0%,#07513fd9 48%,#155d35c9 100%); }
+    .botanical-art { position:absolute; z-index:-2; inset:0; pointer-events:none; }
+    .botanical-art svg { display:block; width:100%; height:100%; overflow:hidden; }
+    .brand { display:block; align-self:flex-start; width:clamp(210px,20vw,285px); max-width:100%; padding:8px 16px; border:1px solid #ffffff6b; border-radius:10px; background:#fff; box-shadow:0 4px 20px #042e2212; }
+    .brand img { display:block; width:100%; height:auto; object-fit:contain; }
+    .visual-panel a:focus-visible { outline-color:var(--leaf); }
+    .visual-main { flex:1; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; width:100%; max-width:530px; margin:0; text-align:left; }
+    .portrait-frame { flex-shrink:0; width:clamp(190px,18vw,282px); aspect-ratio:1; margin:24px 0 0; padding:6px; border:1px solid #cce4a5b0; border-radius:50%; background:#ffffff0a; }
+    .portrait { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 43%; border-radius:50%; }
+    .visual-tag { margin:0 0 14px; color:var(--leaf); font-size:10px; font-weight:650; line-height:1.5; letter-spacing:.18em; text-transform:uppercase; }
+    .visual-title { margin:0; font-size:clamp(29px,2.55vw,44px); font-weight:450; line-height:1.19; letter-spacing:-.035em; text-wrap:balance; }
+    .visual-title em { color:var(--leaf); font-style:normal; }
+    .visual-description { max-width:400px; margin:18px 0 0; color:#e0ebdc; font-size:14px; line-height:1.75; }
+    .expertise { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:0; padding:22px 0 0; border-top:1px solid #ffffff36; list-style:none; }
+    .expertise li { display:flex; flex-direction:column; align-items:center; gap:10px; min-width:0; text-align:center; color:#ecf3e5; }
+    .expertise .icon { width:27px; height:27px; stroke-width:1.4; }
+    .expertise span { font-size:11px; line-height:1.5; }
+    .contact-panel { min-width:0; display:flex; align-items:center; padding:clamp(28px,4.6vw,84px); border-left:1px solid #cfdccd; background:var(--paper); }
+    .contact-content { display:grid; gap:24px; width:100%; max-width:680px; margin:auto; }
+    .contact-content > * { min-width:0; }
+    .eyebrow { display:flex; align-items:center; gap:9px; margin:0 0 16px; color:var(--muted); font-size:10px; font-weight:650; letter-spacing:.16em; text-transform:uppercase; line-height:1.5; }
+    .eyebrow::before { content:""; width:6px; height:6px; border-radius:50%; background:#679636; }
+    h1 { margin:0; font-size:clamp(36px,3.2vw,58px); font-weight:720; line-height:1.09; letter-spacing:-.045em; overflow-wrap:break-word; }
+    h1 span { display:block; }
+    .role { margin:15px 0 0; font-size:19px; line-height:1.5; color:var(--green); }
+    .company { display:flex; align-items:center; gap:8px; margin:7px 0 0; color:var(--muted); font-size:13px; line-height:1.5; }
+    .company strong { font-weight:600; color:var(--ink); }
+    .company-dot { width:3px; height:3px; border-radius:50%; background:#839783; }
+    .lead { margin:0 0 14px; font-size:14px; line-height:1.75; color:var(--muted); }
+    .save { display:flex; align-items:center; gap:13px; min-height:56px; padding:15px 21px; border-radius:999px; background:linear-gradient(110deg,#075c43,#064a3a); color:#fff; box-shadow:0 6px 18px #075c4312; transition:background .18s,transform .18s; }
+    .save:hover { transform:translateY(-2px); background:#064a3a; }
+    .save span { flex:1; font-size:15px; font-weight:650; line-height:1.4; }
+    .save .chevron { width:18px; height:18px; }
+    .download-hint { margin:9px 10px 0; font-size:11px; color:var(--muted); text-align:center; line-height:1.6; }
+    .section-label { display:flex; align-items:center; gap:13px; margin:0 0 13px; color:var(--muted); font-size:10px; font-weight:650; text-transform:uppercase; letter-spacing:.13em; line-height:1.5; }
+    .section-label::after { content:""; flex:1; height:1px; background:var(--line); }
+    .channels { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .details-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:0; font-style:normal; }
+    .details-grid .channel { min-height:72px; }
+    .channel { display:flex; align-items:center; gap:12px; min-width:0; min-height:85px; padding:15px; border:1px solid var(--line); border-radius:14px; background:#fff; transition:transform .18s,border-color .18s,box-shadow .18s; }
+    .channel:hover { transform:translateY(-2px); border-color:#9ab49b; box-shadow:0 5px 17px #17432f0c; }
+    .channel--whatsapp { background:#edf5ed; border-color:#c7dac6; }
+    .channel-icon { display:grid; place-items:center; flex-shrink:0; width:39px; height:39px; border-radius:50%; background:#edf3e9; color:var(--green); }
+    .channel-icon .icon { width:21px; height:21px; }
+    .channel--whatsapp .channel-icon { background:var(--green); color:#fff; }
+    .channel-copy { min-width:0; }
+    .channel strong { display:block; font-size:14px; font-weight:650; line-height:1.5; }
+    .channel small { display:block; margin-top:2px; color:var(--muted); font-size:12px; line-height:1.55; overflow-wrap:anywhere; }
+    .location { display:flex; align-items:center; gap:8px; margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.6; }
+    .location .icon { width:17px; height:17px; }
+    .contact-footer { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:6px; margin:0; padding-top:14px; border-top:1px solid var(--line); }
+    .contact-footer p { margin:0; color:var(--muted); font-size:10px; line-height:1.6; }
+    .share { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:9px 0; border:0; background:transparent; color:var(--green); font-size:12px; font-weight:600; line-height:1.5; }
+    .share .icon { width:18px; height:18px; }
+    dialog { width:min(460px,calc(100% - 32px)); max-height:calc(100svh - 32px); overflow:auto; padding:26px; border:1px solid var(--line); border-radius:22px; background:var(--paper); color:var(--ink); box-shadow:0 25px 90px #063c3540; }
+    dialog::backdrop { background:#053e32a6; }
+    .dialog-head { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .dialog-head h2 { margin:0; font-size:23px; font-weight:650; letter-spacing:-.025em; }
+    .close { display:grid; place-items:center; flex-shrink:0; width:44px; height:44px; border:0; border-radius:50%; background:#eaf0e4; color:var(--green); }
+    .close .icon { width:21px; height:21px; }
+    .dialog-text { margin:15px 0; color:var(--muted); font-size:14px; line-height:1.65; }
+    .share-label { display:block; margin-bottom:8px; font-size:12px; font-weight:600; color:var(--muted); }
+    .share-text { display:block; width:100%; min-height:125px; padding:13px; border:1px solid #bccfbd; border-radius:12px; background:#fff; color:var(--ink); font-size:13px; line-height:1.7; resize:vertical; overflow-wrap:anywhere; }
+    .copy { width:100%; min-height:46px; margin-top:12px; border:0; border-radius:999px; background:var(--green); color:#fff; font-size:14px; font-weight:600; }
+    .share-options { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .share-options a { display:flex; align-items:center; min-height:44px; padding:10px 16px; border:1px solid #b5cbb9; border-radius:999px; font-size:13px; }
+    .toast { position:fixed; z-index:3; bottom:22px; left:50%; transform:translateX(-50%); width:max-content; max-width:calc(100% - 32px); padding:14px 20px; border:1px solid #ffffff29; border-radius:14px; background:var(--forest); color:#fff; box-shadow:0 5px 28px #073d322b; font-size:13px; line-height:1.6; }
+    .toast:empty { display:none; }
+    @media(min-width:761px) and (max-width:1100px) {
+      .presentation { grid-template-columns:minmax(0,42fr) minmax(0,58fr); }
+      .visual-panel { padding:30px 25px; }
+      .brand { width:230px; }
+      .portrait-frame { width:190px; }
+      .visual-title { font-size:30px; }
+      .visual-description { font-size:13px; }
+      .expertise { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+      .expertise li { flex-direction:row; text-align:left; gap:8px; }
+      .expertise .icon { width:23px; height:23px; }
+      .expertise span { font-size:10px; }
+      .contact-panel { padding:32px; }
+      h1 { font-size:37px; }
+      .channels { gap:10px; }
+      .details-grid { grid-template-columns:1fr; gap:10px; }
+      .channel { padding:12px; gap:9px; }
+      .channel-icon { width:32px; height:32px; }
+      .channel strong { font-size:13px; }
+      .channel small { font-size:11px; }
+    }
+    @media(min-width:761px) and (max-height:800px) {
+      .visual-panel { padding-top:26px; padding-bottom:26px; gap:22px; }
+      .brand { width:230px; padding:5px 13px; }
+      .visual-main { margin:0 auto; }
+      .portrait-frame { width:180px; margin:20px 0 0; }
+      .visual-title { font-size:32px; }
+      .visual-tag { margin-bottom:11px; }
+      .visual-description { font-size:13px; margin-top:14px; }
+      .expertise { padding-top:17px; }
+      .contact-panel { padding-top:26px; padding-bottom:26px; }
+      .contact-content { gap:18px; }
+      h1 { font-size:clamp(34px,3vw,47px); }
+      .eyebrow { margin-bottom:12px; }
+      .role { margin-top:11px; font-size:18px; }
+      .lead { margin:0 0 12px; font-size:13px; }
+      .download-hint { font-size:10px; }
+      .channel { min-height:76px; padding-top:12px; padding-bottom:12px; }
+      .details-grid .channel { min-height:66px; }
+      .location { margin-top:10px; }
+      .contact-footer { padding-top:10px; }
+    }
+    @media(max-width:760px) {
+      .presentation { display:block; }
+      .visual-panel { display:grid; grid-template-columns:minmax(0,1fr) 96px; grid-template-areas:"brand portrait" "promise portrait"; align-items:center; gap:10px 16px; padding:20px 24px; }
+      .brand { grid-area:brand; align-self:start; width:178px; max-width:100%; padding:4px 10px; border-radius:7px; }
+      .visual-main { display:contents; }
+      .portrait-frame { grid-area:portrait; width:96px; padding:4px; margin:0; }
+      .visual-title { grid-area:promise; max-width:330px; font-size:20px; line-height:1.22; text-align:left; }
+      .visual-title br { display:none; }
+      .visual-tag,.visual-description,.expertise { display:none; }
+      .contact-panel { display:block; padding:27px 24px 18px; border-left:0; border-top:1px solid #e1e9db; }
+      .contact-content { gap:20px; max-width:620px; }
+      .eyebrow { font-size:8px; letter-spacing:.12em; margin-bottom:12px; }
+      h1 { font-size:clamp(32px,7.6vw,44px); line-height:1.1; }
+      .role { font-size:17px; margin-top:10px; }
+      .company { font-size:12px; margin-top:4px; }
+      .lead { font-size:13px; margin:0 0 14px; }
+      .save { min-height:54px; padding:15px 19px; }
+      .save span { font-size:14px; }
+      .download-hint { font-size:10px; margin:8px 6px 0; }
+      .channels { gap:10px; }
+      .channel { min-height:80px; padding:13px; gap:10px; }
+      .channel-icon { width:32px; height:32px; }
+      .channel-icon .icon { width:19px; height:19px; }
+      .channel strong { font-size:13px; }
+      .channel small { font-size:11px; }
+      .details-grid { grid-template-columns:1fr; gap:10px; }
+      .details-grid .channel { min-height:72px; }
+      .location { margin-top:9px; font-size:11px; }
+      .contact-footer { gap:5px; padding-top:10px; text-align:center; }
+      .share { padding:10px; }
+      .contact-footer p { font-size:9px; }
+    }
+    @media(max-width:360px) {
+      .visual-panel { grid-template-columns:minmax(0,1fr) 90px; padding:20px; gap:10px 13px; }
+      .brand { width:165px; padding:4px 8px; }
+      .portrait-frame { width:90px; padding:3px; }
+      .visual-title { font-size:19px; }
+      .contact-panel { padding:25px 20px 17px; }
+      h1 { font-size:30px; }
+      .channel { padding:11px; gap:8px; }
+      .channel-icon { width:29px; height:29px; }
+      .channel small { font-size:10px; }
+    }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; } }
+    @media print {
+      .presentation { display:block; min-height:0; }
+      .visual-panel { display:none; }
+      .contact-panel { display:block; border:0; padding:20px; }
+      .contact-content { max-width:none; gap:18px; }
+      .save,.download-hint,.lead,.section-label,.contact-footer,dialog,.toast { display:none!important; }
+      h1 { font-size:30px; }
+      .channels,.details-grid { grid-template-columns:1fr 1fr; }
+      .channel { break-inside:avoid; }
+      .channel--email,.channel--web { grid-column:auto; }
+    }
+  </style>
+</head>
+<body>
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="m7 3-4 2c-1 7 8 16 15 16l3-4-5-4-3 3-5-5 3-3-4-5Z"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="whatsapp" viewBox="0 0 24 24"><path d="m4 17-1 4 4-1a9 9 0 1 0-3-3Z"/><path d="m8 7-1 2c1 4 4 7 8 7l2-2-3-2-1 1-3-3 1-1-3-2Z"/></symbol>
+    <symbol id="chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="contact" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M19 9v8m-4-4h8"/></symbol>
+    <symbol id="share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m9 10 6-4m-6 8 6 4"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="leaf" viewBox="0 0 32 32"><path d="M27 4C12 4 4 10 6 21c12 5 22-3 21-17ZM3 29 22 11"/></symbol>
+    <symbol id="flask" viewBox="0 0 32 32"><path d="M12 3h8m-6 0v10L5 27c-1 2 0 2 2 2h18c2 0 3 0 2-2l-9-14V3M10 20h12"/><circle cx="14" cy="24" r="1"/></symbol>
+    <symbol id="sprout" viewBox="0 0 32 32"><path d="M16 29V13m0 11C7 24 4 19 4 14c8 0 12 5 12 10Zm0-7c8 0 12-5 12-10-8 0-12 5-12 10Zm0-4c-5-4-5-8 0-12 5 4 5 8 0 12Z"/></symbol>
+    <symbol id="tree" viewBox="0 0 32 32"><path d="M13 29h6l-1-11m-4 11 1-11M9 20c-7 0-8-8-3-11-2-5 4-9 8-5 3-6 11-3 10 2 7 1 8 8 3 11 1 6-7 8-11 4-2 3-7 2-7-1ZM16 21V9m0 7-4-3m4 1 4-4"/></symbol>
+  </defs></svg>
+
+  <main class="presentation" aria-labelledby="name">
+    <section class="visual-panel" aria-label="Fitonova: innovación para la sanidad vegetal">
+      <div class="botanical-art" aria-hidden="true"><svg viewBox="758 312 266 326" preserveAspectRatio="xMaxYMid slice" focusable="false"><image href="./Tarjeta%20de%20contacto%20Fitonova%20sustentable.png" width="1024" height="1536"/></svg></div>
+      <a class="brand" href="https://www.fitonova.org/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio web de Fitonova"><img src="./logo_fitonova.png" alt="Fitonova · Plataforma de servicios tecnológicos" width="300" height="104"></a>
+      <div class="visual-main">
+        <p class="visual-tag">I+D+i · Sanidad vegetal</p>
+        <h2 class="visual-title">Juntos por una agricultura<br><em>más sustentable.</em></h2>
+        <p class="visual-description">Desarrollo de biopesticidas y soluciones tecnológicas para la sanidad vegetal.</p>
+        <figure class="portrait-frame"><img class="portrait" src="./jmcaballero.jpeg" alt="José Manuel Caballero Valenzuela" width="1176" height="1600"></figure>
+      </div>
+      <ul class="expertise" aria-label="Áreas de trabajo de Fitonova">
+        <li><svg class="icon" aria-hidden="true"><use href="#leaf"/></svg><span>I+D+i</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#flask"/></svg><span>Biopesticidas</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#sprout"/></svg><span>Sanidad vegetal</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#tree"/></svg><span>Agricultura sustentable</span></li>
+      </ul>
+    </section>
+
+    <section class="contact-panel" aria-labelledby="name">
+      <div class="contact-content">
+        <header class="profile-heading">
+          <p class="eyebrow">Tarjeta de presentación digital</p>
+          <h1 id="name"><span>José Manuel</span>Caballero Valenzuela</h1>
+          <p class="role">Gerente</p>
+          <p class="company"><strong>Fitonova SpA</strong><span class="company-dot" aria-hidden="true"></span>Chile</p>
+          <p class="location"><svg class="icon" aria-hidden="true"><use href="#pin"/></svg>Región del Maule, Chile</p>
+        </header>
+        <section class="primary-action" aria-label="Guardar los datos de José Manuel">
+          <p class="lead">Guarda mis datos o elige cómo prefieres contactarme.</p>
+          <a class="save" href="./jose-manuel-caballero.vcf" download="Jose-Manuel-Caballero-Valenzuela.vcf"><svg class="icon" aria-hidden="true"><use href="#contact"/></svg><span>Guardar contacto</span><svg class="icon chevron" aria-hidden="true"><use href="#chevron"/></svg></a>
+          <p class="download-hint">Confirma la importación del contacto en tu agenda.</p>
+        </section>
+        <section class="digital-channels" aria-labelledby="channelsTitle">
+          <h2 class="section-label" id="channelsTitle">Canales digitales</h2>
+          <nav class="channels" aria-label="Canales digitales de José Manuel y Fitonova">
+            <a class="channel channel--whatsapp" href="https://wa.me/56939114532" target="_blank" rel="noopener noreferrer"><span class="channel-icon"><svg class="icon" aria-hidden="true"><use href="#whatsapp"/></svg></span><span class="channel-copy"><strong>WhatsApp</strong><small>Mensaje directo</small></span></a>
+            <a class="channel channel--web" href="https://www.fitonova.org/" target="_blank" rel="noopener noreferrer"><span class="channel-icon"><svg class="icon" aria-hidden="true"><use href="#globe"/></svg></span><span class="channel-copy"><strong>Sitio web</strong><small>www.fitonova.org</small></span></a>
+          </nav>
+        </section>
+        <section class="contact-details" aria-labelledby="detailsTitle">
+          <h2 class="section-label" id="detailsTitle">Datos de contacto</h2>
+          <address class="details-grid">
+            <a class="channel channel--phone" href="tel:+56939114532"><span class="channel-icon"><svg class="icon" aria-hidden="true"><use href="#phone"/></svg></span><span class="channel-copy"><strong>Llamar</strong><small>+56 9 3911 4532</small></span></a>
+            <a class="channel channel--email" href="mailto:jcaballero@fitonova.cl"><span class="channel-icon"><svg class="icon" aria-hidden="true"><use href="#mail"/></svg></span><span class="channel-copy"><strong>Correo electrónico</strong><small>jcaballero@fitonova.cl</small></span></a>
+          </address>
+        </section>
+        <footer class="contact-footer"><button class="share" id="shareButton" type="button"><svg class="icon" aria-hidden="true"><use href="#share"/></svg>Compartir esta tarjeta</button><p>Fitonova SpA · Sanidad vegetal</p></footer>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="shareDialog" aria-labelledby="shareTitle" aria-describedby="shareDescription">
+    <div class="dialog-head"><h2 id="shareTitle">Compartir contacto</h2><button class="close" id="closeDialog" type="button" aria-label="Cerrar"><svg class="icon" aria-hidden="true"><use href="#close"/></svg></button></div>
+    <p class="dialog-text" id="shareDescription">Comparte mis datos de contacto.</p>
+    <label class="share-label" id="shareLabel" for="shareText">Datos de contacto</label>
+    <textarea class="share-text" id="shareText" readonly rows="6"></textarea>
+    <button class="copy" id="copyButton" type="button">Copiar</button>
+    <div class="share-options"><a id="shareWhatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a><a id="shareEmail">Correo electrónico</a></div>
+  </dialog>
+  <div class="toast" id="status" role="status" aria-live="polite"></div>
+  <script>
+    'use strict';
+    // El archivo local comparte datos; al publicarse, comparte la URL de la tarjeta.
+    const publicUrl = /^https?:$/.test(location.protocol) ? location.href.split('#')[0] : '';
+    const title = 'José Manuel Caballero Valenzuela · Fitonova SpA';
+    const contactText = title + '\nGerente\n+56 9 3911 4532\njcaballero@fitonova.cl\nhttps://www.fitonova.org/\nRegión del Maule, Chile';
+    const shareText = publicUrl ? title + '\n' + publicUrl : contactText;
+    const dialog = document.getElementById('shareDialog');
+    const field = document.getElementById('shareText');
+    const shareButton = document.getElementById('shareButton');
+    let statusTimer;
+    function notify(message) {
+      clearTimeout(statusTimer);
+      document.getElementById('status').textContent = message;
+      statusTimer = setTimeout(() => { document.getElementById('status').textContent = ''; }, 5500);
+    }
+    field.value = publicUrl || contactText;
+    document.getElementById('shareDescription').textContent = publicUrl ? 'Envía el enlace de esta tarjeta o cópialo para compartirlo.' : 'Comparte mis datos por WhatsApp o correo, o cópialos desde aquí.';
+    document.getElementById('shareLabel').textContent = publicUrl ? 'Enlace de la tarjeta' : 'Datos de contacto';
+    document.getElementById('shareWhatsapp').href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+    document.getElementById('shareEmail').href = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(shareText);
+    shareButton.addEventListener('click', async () => {
+      if (navigator.share && window.isSecureContext) {
+        try {
+          await navigator.share(publicUrl ? { title, text:'Gerente · Fitonova SpA', url:publicUrl } : { title, text:contactText });
+          return;
+        } catch (error) {
+          if (error.name === 'AbortError') return;
+        }
+      }
+      dialog.showModal();
+    });
+    document.getElementById('closeDialog').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => shareButton.focus());
+    dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+    });
+    document.getElementById('copyButton').addEventListener('click', async () => {
+      try {
+        if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(field.value);
+        notify(publicUrl ? 'Enlace copiado.' : 'Datos de contacto copiados.');
+      } catch (error) {
+        field.focus();
+        field.select();
+        notify('Selecciona el texto y cópialo con Ctrl+C o con el menú de tu teléfono.');
+      }
+    });
+  </script>
+</body>
+</html>
